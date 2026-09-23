@@ -3,18 +3,40 @@ import java.util.Scanner;
 public class HelloWorld {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        int num1 = sc.nextInt();
-        int num2 = sc.nextInt();
+        Scanner scanner = new Scanner(System.in);
 
-        if (num1 > num2) {
-            System.out.println("O primeiro numero é maior");
+        System.out.println("Olá, digite seu nome");
+        String Nome = scanner.nextLine();
+
+        System.out.println("Digite um numero");
+        int numero = scanner.nextInt();
+
+        System.out.println("Contagem Crescente");
+
+        for (int i = 0; i <= numero; i++) {
+            System.out.println(i);
         }
-        else if (num2 > num1) {
-            System.out.println("O segundo número é maior");
+
+        System.out.println("Contagem Decrescente");
+
+        for (int i = numero; i >= 0; i--) {
+            System.out.println(i);
         }
-        else {
-            System.out.println("Os numeros sao iguais");
+
+        System.out.println("Nome");
+
+        if (Nome.length() > 6) {
+
+            for (int i = 0; i < numero; i++) {
+                System.out.println(Nome);
+            }
+
+        } else {
+
+            System.out.println(Nome);
+
         }
+
+        scanner.close();
     }
 }
